@@ -1,13 +1,15 @@
 "use client";
-import React from "react";
+import { useState } from "react";
 import { useTodoStore } from "../../stores/todo";
 
 export default function AddTodo() {
-  const { addTodo, newTodo, updateNewTodo } = useTodoStore();
+  const [newTodo, setNewTodo] = useState("");
+  const { addTodo } = useTodoStore();
 
   const handleSubmit = () => {
     if (newTodo.length > 0) {
-      addTodo();
+      addTodo(newTodo);
+      setNewTodo("");
     }
   };
   return (
@@ -17,7 +19,7 @@ export default function AddTodo() {
         placeholder="Enter new todo"
         value={newTodo}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-          updateNewTodo(e.target.value)
+          setNewTodo(e.target.value)
         }
         className="input input-bordered flex flex-1"
       />
