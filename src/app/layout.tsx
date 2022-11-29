@@ -1,3 +1,5 @@
+"use client";
+import { useThemeStore } from "../stores/theme";
 import "../styles/globals.css";
 import Navigation from "./components/navigation";
 
@@ -6,8 +8,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const { theme } = useThemeStore();
   return (
-    <html lang="en" data-theme="black">
+    <html lang="en" data-theme={theme}>
       <head />
       <body>
         <Navigation />
