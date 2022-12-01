@@ -14,8 +14,8 @@ export default function RootLayout({
       <head />
       <body>
         <Navigation />
-        <div className="pt-5 prose flex justify-center w-screen h-screen max-w-none">
-          <div className="mx-auto max-w-3xl w-full">{children}</div>
+        <div className="flex justify-center w-screen h-screen prose max-w-none">
+          <div className="w-full max-w-3xl px-4 mx-auto">{children}</div>
         </div>
       </body>
     </html>
