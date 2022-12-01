@@ -1,14 +1,9 @@
-"use client";
-import { useThemeStore } from "../../stores/theme";
+// Todo Use store for theme instead of const
+const theme = "light";
 
 export default function ThemeSwitcher() {
-  const { setTheme, theme } = useThemeStore();
-
   return (
-    <button
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="btn btn-ghost rounded"
-    >
+    <button className="rounded btn btn-ghost">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

@@ -1,28 +1,20 @@
-"use client";
-import { useTodoStore } from "../stores/todo";
+const todos: any[] = [];
 
 export default function Todos() {
-  const { todos, removeTodo } = useTodoStore();
-
-  if (todos.length === 0) return null;
-
   return (
     <div className="flex flex-col gap-4 mt-8">
       {todos.map((todo, index: number) => (
         <div
           key={index}
-          className="card rounded-sm p-4 pl-6 bg-base-300 shadow-md flex flex-row justify-between items-center"
+          className="flex flex-row items-center justify-between p-4 pl-6 rounded-sm shadow-md card bg-base-300"
         >
-          <div className="flex flex-row gap-4 items-center">
-            <p className="m-0 flex flex-row gap-4">
+          <div className="flex flex-row items-center gap-4">
+            <p className="flex flex-row gap-4 m-0">
               <span className="text-lg font-bold">{index + 1}.</span> {todo}
             </p>
           </div>
 
-          <button
-            onClick={() => removeTodo(index)}
-            className="btn rounded-full btn-ghost btn-sm p-1 w-8 h-8"
-          >
+          <button className="w-8 h-8 p-1 rounded-full btn btn-ghost btn-sm">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

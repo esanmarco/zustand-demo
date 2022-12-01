@@ -1,5 +1,3 @@
-"use client";
-import { useThemeStore } from "../stores/theme";
 import "../styles/globals.css";
 import Navigation from "./components/navigation";
 
@@ -8,14 +6,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const { theme } = useThemeStore();
   return (
-    <html lang="en" data-theme={theme}>
+    <html lang="en" data-theme={"light"}>
       <head />
       <body>
         <Navigation />
-        <div className="pt-5 prose flex justify-center w-screen h-screen max-w-none">
-          <div className="mx-auto max-w-3xl w-full">{children}</div>
+        <div className="flex justify-center w-screen h-screen pt-5 prose max-w-none">
+          <div className="w-full max-w-3xl mx-auto">{children}</div>
         </div>
       </body>
     </html>
