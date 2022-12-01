@@ -12,7 +12,7 @@ export default function RootLayout({
       <body>
         <Navigation />
         <div className="flex justify-center w-screen h-screen prose max-w-none">
-          <div className="w-full max-w-3xl px-3 mx-auto">{children}</div>
+          <div className="w-full max-w-2xl px-4 mx-auto">{children}</div>
         </div>
       </body>
     </html>

@@ -1,4 +1,4 @@
-// Todos
+// TODOs
 // 1. Use store to pull in todos
 // 2. Handle delete action to store
 const todos: string[] = [];
