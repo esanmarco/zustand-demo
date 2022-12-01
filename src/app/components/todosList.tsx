@@ -1,9 +1,12 @@
-const todos: any[] = [];
+// Todos
+// 1. Use store to pull in todos
+// 2. Handle delete action to store
+const todos: string[] = [];
 
-export default function Todos() {
+export default function TodosList() {
   return (
     <div className="flex flex-col gap-4 mt-8">
-      {todos.map((todo, index: number) => (
+      {todos.map((todo: string, index: number) => (
         <div
           key={index}
           className="flex flex-row items-center justify-between p-4 pl-6 rounded-sm shadow-md card bg-base-300"

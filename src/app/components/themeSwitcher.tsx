@@ -1,4 +1,6 @@
-// Todo Use store for theme instead of const
+// Todos
+// 1. Use store for theme instead of const
+// 2. Handle theme switcher action to store
 const theme = "light";
 
 export default function ThemeSwitcher() {
