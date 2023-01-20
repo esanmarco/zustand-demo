@@ -1,11 +1,11 @@
 import create from "zustand";
 
-interface Store {
+interface ThemeStore {
   theme: string;
   setTheme: (theme: string) => void;
 }
 
-export const useThemeStore = create<Store>((set) => ({
+export const useThemeSwitcher = create<ThemeStore>((set: any) => ({
   theme: "light",
   setTheme: (theme: string) => set({ theme }),
 }));

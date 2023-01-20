@@ -1,13 +1,12 @@
 "use client";
-import { useThemeStore } from "../../stores/theme";
+import { useThemeSwitcher } from "../store/useThemeSwitcher";
 
 export default function ThemeSwitcher() {
-  const { setTheme, theme } = useThemeStore();
-
+  const { theme, setTheme } = useThemeSwitcher();
   return (
     <button
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="btn btn-ghost rounded"
+      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+      className="rounded btn btn-ghost"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

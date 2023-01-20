@@ -1,14 +1,15 @@
 "use client";
-import { useThemeStore } from "../stores/theme";
 import "../styles/globals.css";
 import Navigation from "./components/navigation";
+import { useThemeSwitcher } from "./store/useThemeSwitcher";
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const { theme } = useThemeStore();
+  const { theme } = useThemeSwitcher();
+
   return (
     <html lang="en" data-theme={theme}>
       <head />
