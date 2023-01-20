@@ -1,11 +1,13 @@
-// TODOs
-// 1. Use store for theme instead of const
-// 2. Handle theme switcher action to store
-const theme = "light";
+"use client";
+import { useThemeSwitcher } from "../store/useThemeSwitcher";
 
 export default function ThemeSwitcher() {
+  const { theme, setTheme } = useThemeSwitcher();
   return (
-    <button className="rounded btn btn-ghost">
+    <button
+      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+      className="rounded btn btn-ghost"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

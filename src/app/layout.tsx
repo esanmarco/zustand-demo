@@ -1,13 +1,17 @@
+"use client";
 import "../styles/globals.css";
 import Navigation from "./components/navigation";
+import { useThemeSwitcher } from "./store/useThemeSwitcher";
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const { theme } = useThemeSwitcher();
+
   return (
-    <html lang="en" data-theme={"light"}>
+    <html lang="en" data-theme={theme}>
       <head />
       <body>
         <Navigation />
